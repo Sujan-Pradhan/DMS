@@ -54,8 +54,8 @@ session_start();
 										<h5 class="text-white">Total</h5>
 										<h5 class="text-white">Admin</h5>
 									</div>
-									<div class="col-md-4">
-										<a href="admin.php"><i class="fa fa-users-cog fa-3x my-4" style="color: white;"></i></a>
+									<div class="col-md-3">
+										<a href="admin.php"><i class="fas fa-user-lock fa-3x my-4" style="color: white;"></i></a>
 									</div>
 								</div>
 							</div>
@@ -68,8 +68,8 @@ session_start();
 										<h5 class="text-white">Total</h5>
 										<h5 class="text-white">Doctor</h5>
 									</div>
-									<div class="col-md-4">
-										
+									<div class="col-md-3">
+										<a href="doctor.php"><i class="fas fa-user-md fa-3x my-4" style="color: white;"></i></a>
 									</div>
 								</div>
 							</div>
@@ -82,8 +82,8 @@ session_start();
 										<h5 class="text-white">Total</h5>
 										<h5 class="text-white">Patient</h5>
 									</div>
-									<div class="col-md-4">
-										
+									<div class="col-md-3">
+										<a href="patient.php"><i class="fas fa-procedures fa-3x my-4" style="color: white;"></i></a>
 									</div>
 								</div>
 							</div>
