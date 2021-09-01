@@ -8,8 +8,18 @@ session_start();
 <html>
 <head>
 	<title>Admin</title>
+	<style type="text/css">
+		.back {
+			position: relative;
+			background: url("../img/hos.jpg");
+			background-size: cover;
+			width: 100%;
+			min-height: 550px;
+			overflow: hidden;
+		}
+	</style>
 </head>
-<body>
+<body class="back">
 	<?php
 
 	include("../include/header.php");
@@ -60,7 +70,8 @@ session_start();
 										<td>$id</td>
 										<td>$username</td>
 										<td>
-											<a href = 'admin?id=$id'><button id='$id' class='btn btn-danger remove'>Remove</button></a>
+											<a href='deleteadmin.php?id=".$row['id']."'>
+										<button class='btn btn-danger'>Remove</button></a>
 										</td>
 									"; 
 								}
@@ -77,6 +88,7 @@ session_start();
 
 									$query = "DELETE FROM admin WHERE id='$id'";
 									mysqli_query($conn,$query);
+
 								}
 
 
@@ -100,16 +112,15 @@ session_start();
 
 									if (empty($uname)) {
 										$error['u'] = "Enter Admin Username";
-										# code...
 									}else if(empty($pass)) {
-										# code...
+										
 										$error['u'] = "Enter Admin Password";
 									}else if(empty($image)) {
 										$error['u'] = "Add Admin Picture";
 									}
 
 									if (count($error) == 0) {
-										# code...
+										
 										$q = "INSERT INTO  admin(username,password,profile) VALUES('$uname','$pass','$image')";
 
 										$result = mysqli_query($conn,$q);

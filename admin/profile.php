@@ -8,8 +8,18 @@ session_start();
 <html>
 <head>
 	<title>Admin Profile</title>
+	<style type="text/css">
+		.back {
+			position: relative;
+			background: url("../img/hos.jpg");
+			background-size: cover;
+			width: 100%;
+			min-height: 550px;
+			overflow: hidden;
+		}
+	</style>
 </head>
-<body>
+<body class="back">
 
 	<?php
 	include("../include/header.php");

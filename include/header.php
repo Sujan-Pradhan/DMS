@@ -16,7 +16,7 @@
 <body>
      
 
-    <nav class="navbar navbar-expand-lg navbar-info bg-info">
+    <nav class="navbar navbar-expand-lg navbar-info bg-primary">
     	<h5 class="text-white">Doctor Management System</h5>
 
     	<div class="mr-auto"></div>
@@ -39,12 +39,18 @@
             <li class="nav-item"><a href="logout.php" class="nav-link text-white">logout</a></li>
             ';
 
+            }else if(isset($_SESSION['patient'])) {
+                 $user = $_SESSION['patient'];
+                echo '
+                <li class="nav-item"><a href="#" class="nav-link text-white">'.$user.'</a></li>
+            <li class="nav-item"><a href="logout.php" class="nav-link text-white">logout</a></li>
+            ';
             } else {
     			echo '
-                <li class="nav-item"><a href="index.php" class="nav-link text-white">Home</a></li>
-    			<li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">Admin</a></li>
-                <li class="nav-item"><a href="doctorlogin.php" class="nav-link text-white">Doctor</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white">Patient</a></li>
+                <li class="nav-item"><a href="index.php" class="nav-link text-white btn btn-outline-secondary mx-2" >Home</a></li>
+    			<li class="nav-item"><a href="adminlogin.php" class="nav-link text-white btn btn-outline-secondary mx-2">Admin</a></li>
+                <li class="nav-item"><a href="doctorlogin.php" class="nav-link text-white btn btn-outline-secondary mx-2">Doctor</a></li>
+                <li class="nav-item"><a href="patientlogin.php" class="nav-link text-white btn btn-outline-secondary mx-2">Patient</a></li>
     		';
     		}
 
