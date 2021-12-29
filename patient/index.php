@@ -117,7 +117,7 @@ session_start();
 
 					?>
 
-					<!-- <div class="col-md-12">
+					<div class="col-md-12">
 						<div class="row">
 							<div class="col-md-3"></div>
 							<div class="col-md-6 jumbotron bg-info my-5">
@@ -135,7 +135,7 @@ session_start();
 							</div>
 							<div class="col-md-3"></div>
 						</div>
-					</div> -->
+					</div>
 
 				</div>
 			</div>
